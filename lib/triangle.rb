@@ -6,10 +6,9 @@ class Triangle
     @y = y
     @z = z
   end
-  #y <= 0 || x <= 0 || z <= 0
 
   def kind
-    if x + y <= z || x + z <= y || y + z <= x || y, x, z <= 0
+    if x + y <= z || x + z <= y || y + z <= x || y <= 0 || x <= 0 || z <= 0
         raise TriangleError
     elsif x == y && x == z 
       :equilateral
